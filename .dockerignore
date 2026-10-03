@@ -1,0 +1,30 @@
+# Git
+.git
+.gitignore
+
+# Python caching & environments
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+env/
+pip-log.txt
+
+# Local environment variables
+.env
+.env.local
+
+# Jupyter Notebooks (common in ML projects)
+.ipynb_checkpoints
+*.ipynb
+
+# IDEs and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Testing and coverage
+.pytest_cache/
+.coverage
+htmlcov/

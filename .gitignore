@@ -1,0 +1,87 @@
+# ==============================================================================
+# .gitignore: Entity Extraction Microservice
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# Python & Bytecode Caching
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ------------------------------------------------------------------------------
+# Virtual Environments
+# ------------------------------------------------------------------------------
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# ------------------------------------------------------------------------------
+# Environment Variables & Secrets
+# ------------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ------------------------------------------------------------------------------
+# Large Machine Learning Model Weights
+# GitHub imposes a strict 100 MB per-file limit. Model weights (.bin, .safetensors)
+# typically exceed 700 MB and must NOT be committed to standard Git repositories.
+# For production tracking, either:
+#   1. Use Git LFS (`git lfs track "model/*.safetensors"`), OR
+#   2. Download weights during CI/CD or Docker build, OR
+#   3. Mount weights at runtime via Docker volumes (-v /host/model:/app/model)
+# ------------------------------------------------------------------------------
+model/*.bin
+model/*.safetensors
+model/*.pt
+model/*.pth
+model/*.onnx
+model/*.h5
+
+# Keep lightweight architecture configs and tokenizer definitions tracked
+!model/gliner_config.json
+!model/tokenizer.json
+!model/tokenizer_config.json
+!model/.gitkeep
+
+# ------------------------------------------------------------------------------
+# IDEs & Operating System Artifacts
+# ------------------------------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# ------------------------------------------------------------------------------
+# Testing, Coverage & Profiling
+# ------------------------------------------------------------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ------------------------------------------------------------------------------
+# Jupyter Notebooks
+# ------------------------------------------------------------------------------
+.ipynb_checkpoints
+*.ipynb
+
+# ------------------------------------------------------------------------------
+# Distribution & Build
+# ------------------------------------------------------------------------------
+dist/
+build/
+*.egg-info/

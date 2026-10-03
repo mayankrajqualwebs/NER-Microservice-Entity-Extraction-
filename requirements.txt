@@ -1,0 +1,17 @@
+# Web framework for high-performance async REST API
+fastapi>=0.100.0
+
+# Production ASGI server implementation for FastAPI
+uvicorn>=0.22.0
+
+# Data validation, type enforcement, and request/response serialization
+pydantic>=2.0.0
+
+# Generalist and Lightweight Named Entity Recognition (zero-shot & fine-tuned inference)
+gliner>=0.2.0
+
+# Deep learning framework backend required by GLiNER transformer models
+torch>=2.0.0
+
+# NLP framework utilized as local/fallback inference engine for token tagging
+spacy>=3.5.0
